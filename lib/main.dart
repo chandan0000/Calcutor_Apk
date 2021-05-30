@@ -20,12 +20,12 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int firstnum;
-  int secondnum;
+  int? firstnum;
+  int? secondnum;
   String texttodisplay = "";
-  String res;
-  String operatorperform;
-  void btnclicked(String btnval) {
+  String? res;
+  String? operatorperform;
+  void? btnclicked(String btnval) {
     if (btnval == "c") {
       texttodisplay = "";
       firstnum = 0;
@@ -87,8 +87,8 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: MaterialButton(
                         padding: EdgeInsets.all(25.0),
                         onPressed: () => {},
-                        child: Text(
-                          "9",
+                        child: Text( 
+                          "$texttodisplay 9",
                           style: TextStyle(fontSize: 25.0),
                         ),
                       ),
@@ -98,7 +98,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         padding: EdgeInsets.all(25.0),
                         onPressed: () {},
                         child: Text(
-                          "8",
+                          "$texttodisplay 8",
                           style: TextStyle(fontSize: 25.0),
                         ),
                       ),
@@ -108,7 +108,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         padding: EdgeInsets.all(25.0),
                         onPressed: () {},
                         child: Text(
-                          "7",
+                          "$texttodisplay 7",
                           style: TextStyle(fontSize: 25.0),
                         ),
                       ),
@@ -118,51 +118,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         padding: EdgeInsets.all(25.0),
                         onPressed: () {},
                         child: Text(
-                          "+",
-                          style: TextStyle(fontSize: 25.0),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                Row(
-                  children: <Widget>[
-                    Expanded(
-                      child: MaterialButton(
-                        padding: EdgeInsets.all(25.0),
-                        onPressed: () {},
-                        child: Text(
-                          "6",
-                          style: TextStyle(fontSize: 25.0),
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      child: MaterialButton(
-                        padding: EdgeInsets.all(25.0),
-                        onPressed: () {},
-                        child: Text(
-                          "5",
-                          style: TextStyle(fontSize: 25.0),
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      child: MaterialButton(
-                        padding: EdgeInsets.all(25.0),
-                        onPressed: () {},
-                        child: Text(
-                          "4",
-                          style: TextStyle(fontSize: 25.0),
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      child: MaterialButton(
-                        padding: EdgeInsets.all(25.0),
-                        onPressed: () {},
-                        child: Text(
-                          "-",
+                          "$texttodisplay +",
                           style: TextStyle(fontSize: 25.0),
                         ),
                       ),
@@ -176,7 +132,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         padding: EdgeInsets.all(25.0),
                         onPressed: () {},
                         child: Text(
-                          "3",
+                          "$texttodisplay 6",
                           style: TextStyle(fontSize: 25.0),
                         ),
                       ),
@@ -186,7 +142,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         padding: EdgeInsets.all(25.0),
                         onPressed: () {},
                         child: Text(
-                          "2",
+                          "$texttodisplay 5",
                           style: TextStyle(fontSize: 25.0),
                         ),
                       ),
@@ -196,7 +152,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         padding: EdgeInsets.all(25.0),
                         onPressed: () {},
                         child: Text(
-                          "1",
+                          "$texttodisplay 4",
                           style: TextStyle(fontSize: 25.0),
                         ),
                       ),
@@ -206,7 +162,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         padding: EdgeInsets.all(25.0),
                         onPressed: () {},
                         child: Text(
-                          "*",
+                          "$texttodisplay -",
                           style: TextStyle(fontSize: 25.0),
                         ),
                       ),
@@ -220,7 +176,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         padding: EdgeInsets.all(25.0),
                         onPressed: () {},
                         child: Text(
-                          "c",
+                          "$texttodisplay 3",
                           style: TextStyle(fontSize: 25.0),
                         ),
                       ),
@@ -230,7 +186,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         padding: EdgeInsets.all(25.0),
                         onPressed: () {},
                         child: Text(
-                          "0",
+                          "$texttodisplay 2",
                           style: TextStyle(fontSize: 25.0),
                         ),
                       ),
@@ -240,7 +196,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         padding: EdgeInsets.all(25.0),
                         onPressed: () {},
                         child: Text(
-                          "=",
+                          "$texttodisplay 1",
                           style: TextStyle(fontSize: 25.0),
                         ),
                       ),
@@ -250,7 +206,51 @@ class _MyHomePageState extends State<MyHomePage> {
                         padding: EdgeInsets.all(25.0),
                         onPressed: () {},
                         child: Text(
-                          "/",
+                          "$texttodisplay *",
+                          style: TextStyle(fontSize: 25.0),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                Row(
+                  children: <Widget>[
+                    Expanded(
+                      child: MaterialButton(
+                        padding: EdgeInsets.all(25.0),
+                        onPressed: () {},
+                        child: Text(
+                          "$texttodisplay c",
+                          style: TextStyle(fontSize: 25.0),
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      child: MaterialButton(
+                        padding: EdgeInsets.all(25.0),
+                        onPressed: () {},
+                        child: Text(
+                          "$texttodisplay 0",
+                          style: TextStyle(fontSize: 25.0),
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      child: MaterialButton(
+                        padding: EdgeInsets.all(25.0),
+                        onPressed: () {},
+                        child: Text(
+                          "$texttodisplay =",
+                          style: TextStyle(fontSize: 25.0),
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      child: MaterialButton(
+                        padding: EdgeInsets.all(25.0),
+                        onPressed: () {},
+                        child: Text(
+                          "$texttodisplay /",
                           style: TextStyle(fontSize: 25.0),
                         ),
                       ),
