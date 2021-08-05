@@ -1,6 +1,7 @@
 // import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+// Hii
+var x add;
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
